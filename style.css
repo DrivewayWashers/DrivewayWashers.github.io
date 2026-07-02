@@ -1,0 +1,231 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e6f4f8; /* Light pastel water blue */
+    color: #1a3a5f; /* Deep ocean blue */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation Header --- */
+header {
+    background-color: #0077b6; /* Strong bright blue */
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: #caf0f8; /* Very light sky blue */
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid white;
+}
+
+/* --- Main Layout Container --- */
+.container {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #0096c7, #03045e);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ade8f4;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    background-color: #00f5d4; /* Vibrant teal/cyan accent */
+    color: #03045e;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s, background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #00bbf9;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* --- Services Grid --- */
+.services {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #00bbf9;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+/* --- About & Form Sections --- */
+.about-section, .form-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about-section h2, .form-section h2 {
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-section ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.about-section li {
+    margin-bottom: 10px;
+}
+
+/* --- Form Styles --- */
+.booking-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"], /* ✨ Styled this so it is full-sized and cool again! */
+.form-group input[type="tel"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #90e0ef;
+    border-radius: 8px;
+    background-color: #f0faff;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #0077b6;
+}
+
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #03045e; /* Deep dark blue */
+    color: #caf0f8;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* --- Fix for Mobile Screens --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stacks the logo above the navigation links on phones */
+        gap: 15px;
+        padding: 15px 10px;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 0.95rem; /* Makes the text slightly smaller just for phones */
+        white-space: nowrap; /* Stops "About Us" and "Book a Wash" from breaking onto two lines */
+    }
+}
