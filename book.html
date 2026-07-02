@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Wash | Driveway Washers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">💦 Driveway Washers</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="book.html" class="active">Book a Wash</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Schedule Your Driveway Wash</h2>
+            <p>Fill out the form below, and we will get back to you to confirm your appointment!</p>
+
+            <form action="https://formspree.io/f/mgojnbyb" method="POST" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="Customer Name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Email Address:</label>
+                    <input type="text" id="contact" name="Email Address" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes about the car:</label>
+                    <input type="text" id="notes" name="Car Notes" placeholder="e.g., Black Honda Civic, needs extra focus on the wheels">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="Requested Date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select Package Add-ons:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="Addon: Car Shine" value="Yes"> Car Shine</label>
+                        <label><input type="checkbox" name="Addon: Tire Scrub" value="Yes"> Tire Scrub</label>
+                        <label><input type="checkbox" name="Addon: Interior" value="Yes" checked> Interior Detail</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Submit Booking Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Driveway Washers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
